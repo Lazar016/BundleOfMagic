@@ -1,0 +1,42 @@
+1. React
+Šta je korišćeno: React je osnovna biblioteka za izgradnju korisničkog interfejsa.
+Kako je korišćeno: Koristio sam React za kreiranje komponenti kao što su Home, About, i Layout.
+Zašto je korišćeno: React omogućava izgradnju interaktivnih UI komponenata koje se lako ponovo koriste. Ovaj pristup pomaže u održavanju čistog, modularnog koda i jednostavnom menjanju stanja aplikacije.
+2. Material-UI (MUI)
+Šta je korišćeno: Koristio sam različite Material-UI komponente kao što su Box, Typography, Button, AppBar, Toolbar i CssBaseline.
+Kako je korišćeno:
+Box: Koristio sam Box kao osnovnu kontejnersku komponentu za centriranje sadržaja (tekst i dugme) u sredini ekrana.
+Typography: Korišćen je za stilizovanje naslova, čime se omogućava jednostavno i dosledno formatiranje teksta.
+Button: Za interaktivne elemente u aplikaciji (dugme), omogućavajući korisnicima da kliknu i preusmere ih na druge stranice.
+AppBar i Toolbar: AppBar je korišćen za navigaciju između stranica (Početna i O Nama). Unutar njega se nalazi Toolbar, koji sadrži linkove za navigaciju.
+CssBaseline: Ova komponenta je korišćena za resetovanje osnovnih stilova i postavljanje doslednog izgleda aplikacije, uklanjajući razlike između različitih browser-a.
+Zašto je korišćeno: Material-UI je popularna biblioteka koja nudi unapred definisane komponente koje su stilizovane prema Material Design smernicama. Omogućava brzo razvijanje aplikacija sa modernim i profesionalnim izgledom, kao i responzivnost na različitim uređajima.
+3. React Router
+Šta je korišćeno: React Router je korišćen za upravljanje navigacijom između različitih stranica (komponenti).
+Kako je korišćeno:
+BrowserRouter je postavljen kao roditelj svih komponenti, omogućujući korišćenje istorije navigacije.
+Routes i Route: Definisali smo Routes sa Route elementima za preusmeravanje između stranica kao što su Home i About.
+Link: U Layout komponenti, Link komponenta iz react-router-dom je korišćena za navigaciju između stranica bez osvežavanja stranice (single-page application).
+Zašto je korišćeno: React Router omogućava jednostavno kreiranje više stranica u jednoj aplikaciji i upravljanje URL-ovima, bez potrebe za učitavanjem novih stranica sa servera. Ovaj pristup je ključan za izgradnju modernih web aplikacija koje se ponašaju kao jedinstvene stranice (SPA).
+4. ThemeProvider i CssBaseline
+Šta je korišćeno: ThemeProvider iz Material-UI i CssBaseline.
+Kako je korišćeno:
+ThemeProvider: Koristio sam ThemeProvider da primenim custom theme na celu aplikaciju. theme sadrži definicije boja, tipografije i drugih stilova.
+CssBaseline: Dodao sam CssBaseline za resetovanje stilova i primenu globalnih stilova koji su deo Material-UI dizajna.
+Zašto je korišćeno: ThemeProvider omogućava centralizovano upravljanje stilovima (boje, tipografija, itd.) kroz celu aplikaciju, dok CssBaseline pomaže da aplikacija izgleda dosledno na svim uređajima i browser-ima.
+5. React (useState, useEffect) - Stanje i životni ciklus
+Šta je korišćeno: React useState i useEffect hook-ovi.
+Kako je korišćeno: Korišćeni su za upravljanje stanjem aplikacije i efekte u komponentama (iako nije direktno prikazano u kodu za sada).
+Zašto je korišćeno: useState omogućava upravljanje lokalnim stanjem unutar komponenti, dok useEffect omogućava obavljanje operacija kao što su asinhroni pozivi ili manipulacija DOM-om kada se komponenta montira ili ažurira.
+6. Modularnost i Komponente
+Šta je korišćeno: Kreirao sam komponente kao što su Home, About, i Layout.
+Kako je korišćeno:
+Home i About stranice su kreirane kao funkcionalne komponente koje sadrže svoj sadržaj.
+Layout je koriscen kao zajednička komponenta koja sadrži navigaciju (AppBar) i okružuje sadržaj stranica.
+Zašto je korišćeno: Razdvajanjem aplikacije na komponente, omogućava se lakša održivost, ponovna upotreba koda i lakše testiranje.
+Zaključak
+Ova aplikacija koristi React kao osnovu za razvoj korisničkog interfejsa, Material-UI za unapred stilizovane komponente koje omogućavaju brzi razvoj modernih aplikacija, i React Router za upravljanje navigacijom između različitih stranica. Komponente su modularizovane kako bi aplikacija bila fleksibilna i jednostavna za održavanje. Korišćenjem ThemeProvider i CssBaseline, omogućena je doslednost dizajna kroz celu aplikaciju, što omogućava lakše upravljanje izgledom i osećajem aplikacije.
+
+Takođe, korišćenjem React Hooks kao što su useState i useEffect, aplikacija postaje dinamična i lako reaguje na promene u stanju, što je ključno za moderan razvoj aplikacija.
+
+Ovaj pristup omogućava izgradnju profesionalnih, skalabilnih i lako održivih aplikacija koje su u skladu sa modernim standardima u industriji.
