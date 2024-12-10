@@ -1,0 +1,92 @@
+Opis Projekta
+Ovaj projekat je React aplikacija koja koristi Redux i Redux-Saga za upravljanje stanjem i asinhrone operacije. Glavni cilj aplikacije je prikazivanje listu postova koji se učitavaju sa eksternog API-ja koristeći axios. Projekt je postavljen tako da koristi Redux za upravljanje podacima i Redux-Saga za asinhronu logiku.
+
+------------------------------------
+Glavne Tehnologije i Alati
+React: Za izgradnju UI komponenti.
+Redux: Za upravljanje globalnim stanjem aplikacije.
+Redux-Saga: Za upravljanje asinhronim radnjama i kontrolu bočnih efekata.
+axios: Za pravljenje HTTP zahteva prema API-ju.
+
+----------------------------------------------
+
+
+
+
+
+
+Struktura Projekta
+Komponente:
+
+PostsList.jsx: Komponenta koja prikazuje listu postova.
+PostItem.jsx: Komponenta koja prikazuje pojedinačni post sa naslovom, podnaslovom i sadržajem.
+
+Redux Store (store.js):
+
+Povezuje reducer sa Redux store-om i postavlja middleware (Redux-Saga).
+Redux-Saga middleware je integrisan za rad sa asinhronim operacijama.
+Redux Slice (postsSlice.js):
+
+Definiše inicijalno stanje i reducer-e za upravljanje postovima.
+Definiše fetchPosts, fetchPostsSuccess, i fetchPostsFailure akcije za rad sa podacima o postovima.
+Redux-Saga (postsSaga.js):
+
+Implementira watchFetchPosts funkciju koja osluškuje fetchPosts akciju i pokreće asinhroni API zahtev.
+Koristi takeLatest i call iz Redux-Saga za upravljanje asinhronim zahtevima.
+API (postApi.js):
+
+postApi.js sadrži logiku za pravljenje HTTP zahteva prema eksternom API-ju koristeći axios.
+API endpointi su definisani za dobijanje liste postova i drugih podataka.
+
+
+
+
+---------------------------------------------
+Šta je Uradjeno:
+Redux i Redux-Saga integracija:
+
+Aplikacija koristi Redux za centralizovano upravljanje stanjem, dok Redux-Saga služi za asinhronu logiku (API zahteve).
+Implementiran je watchFetchPosts saga koja se povezuje sa Redux store-om i osluškuje akcije za učitavanje postova.
+Postavljanje API-ja:
+
+Korišćen je axios za pravljenje HTTP zahteva prema API-ju. Sa API-ja se učitavaju podaci o postovima.
+Korišćena je funkcija fetchPosts koja pokreće API zahtev kada korisnik učita stranicu.
+UI i Komponente:
+
+Komponente kao što su PostsList i PostItem koriste Redux store kako bi prikazale podatke o postovima na ekranu.
+Komponente su povezane sa Redux-om koristeći useSelector za čitanje podataka i useDispatch za slanje akcija.
+
+
+
+
+-----------------------------------------
+
+Korišćene Akcije i Reduceri
+Akcije:
+
+fetchPosts: Akcija koja se koristi za pokretanje API zahteva.
+fetchPostsSuccess: Akcija koja se koristi za pohranu uspešno dobijenih podataka iz API-ja.
+fetchPostsFailure: Akcija koja se koristi kada dođe do greške prilikom API zahteva.
+Reducers:
+
+postsReducer: Reducer koji obrađuje akcije i ažurira stanje aplikacije.
+Inicijalno stanje: Sadrži informacije o postovima, statusu učitavanja (loading), i greške (error).
+Skripte i Zavisnosti
+Kreiranje i pokretanje projekta:
+
+Projekt je kreiran pomoću create-react-app i koristi npm za instalaciju zavisnosti.
+Korišćeni su paketi kao što su:
+react, redux, react-redux: Za rad sa React-om i Redux-om.
+redux-saga: Za upravljanje asinhronim operacijama.
+axios: Za pravljenje HTTP zahteva.
+
+
+
+
+
+
+
+
+-----------------------
+Završni Zaključak
+U ovom projektu je korišćen React za izgradnju korisničkog interfejsa, Redux za upravljanje stanjem, i Redux-Saga za asinhrono upravljanje podacima i bočnim efektima. API podaci o postovima se učitavaju putem axios zahteva i čuvaju u globalnom stanju aplikacije putem Redux-a. Različite komponente aplikacije komuniciraju sa Redux store-om kako bi prikazale podatke korisnicima.
